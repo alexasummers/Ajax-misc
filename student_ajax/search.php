@@ -30,7 +30,13 @@ function display_student($row) {
     $student.='<img src="data:' . $row["Picture_Type"] . ';base64,' . base64_encode($row["Picture"]) . '">';
     $student.="<div class='name'>" . $row["FirstName"] . " " . $row["LastName"] . "</div>";
     $student.="<table>";
-    $gender = $row["Gender"] == 'M' ? "Male" : "Female";
+    // $gender = $row["Gender"] == 'M' ? "Male" : "Female";
+    if ($row['Gender'] == 'M'){
+        $gender= "Male";}
+    elseif($row['Gender'] == 'F'){
+        $gender= "Female";}
+    elseif($row['Gender'] == 'O'){
+        $gender= "Other";}
     $student.="<tr><td class='name'> Gender: </td><td class='value'>" . $gender . "</td></tr>";
     $age = date_diff(date_create($row["DateOfBirth"]), date_create('now'))->y; //calculate $age based using date_diff (date difference)
     $student.="<tr><td class='name'> Age: </td><td class='value'>" . $age . "</td></tr>";
