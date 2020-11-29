@@ -1,0 +1,45 @@
+table.items{
+    border-collapse: collapse;
+}
+
+th{
+    color:gray;
+    text-align: left;
+    border-bottom: 2px solid lightgray;
+    background-color:rgb(250,250,250);
+    padding:10px;
+}
+
+tr.item{
+    border-bottom: 1px solid lightgray;
+}
+td.name{
+    width:400px;
+}
+
+.checked{
+    text-decoration: line-through;
+    color:gray;
+}
+
+tr.item td{
+    padding:10px;
+    text-align: left;
+}
+
+td input{
+    border-width:0px;
+}
+
+tr.new input{
+    border:1px solid lightgray;
+}
+
+tr.new{
+    background-color:rgb(245,245,245);
+}
+
+button[name=edit]{
+    display:none;
+}
+
