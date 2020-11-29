@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Calendar</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style/calendar.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript"  src='script/general.js'></script>
+        <script type="text/javascript"  src='script/dateFormat.js'></script>
+        <script type="text/javascript"  src='script/calendar.js'></script>
+        <script id="event-detail-template" type="text/html">
+                    <table class='details'>
+                        <tr><td class='name'>Name:</td>
+                            <td class='value'>{{Name}}</td></tr>
+                        <tr><td class='name'>Start Date:</td>
+                            <td class='value'>{{StartDate}}</td></tr>
+                        <tr><td class='name'>Duration:</td>
+                            <td class='value'>{{Duration}}</td></tr>
+                    </table>
+            </script>
+        <script id="calendar-template" type="text/html">
+            <table>
+                <tr>
+                    <th></th>
+                    {{#block days}}
+                    <th> {{Day}} </th>
+                    {{#end block days}}
+                </tr>
+                {{#block hours}}
+                <tr>
+                    <td>{{Hour}}</td>
+                    {{#block cells}}
+                    <td id="{{ID}}">
+                    </td>
+                    {{#end block cells}}
+                </tr>
+                {{#end block hours}}
+            </table>
+        </script>
+
+    </head>
+    <body>
+        <!-- the navigation bar-->
+        <div class="navigation">
+            <div id="prev-week" class="button"><img src="images/prev.png"></div>
+            <div class="week" id="week"></div>
+            <div id="next-week" class="button"><img src="images/next.png"></div> 
+        </div>
+        <!-- the calendar -->
+        <div class="calendar" id="calendar"></div><div id="details" class="details"></div>
+    </body>
+</html>
