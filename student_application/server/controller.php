@@ -43,7 +43,12 @@ function get_info($connection) {
             $row = mysqli_fetch_array($result);
             $array["Picture"] = 'data:' . $row["Picture_Type"] . ';base64,' . base64_encode($row["Picture"]);
             $array["Name"] = $row["FirstName"] . " " . $row["LastName"];
-            $array["Gender"] = $row["Gender"] == 'M' ? "Male" : "Female";
+            if ($row['Gender'] == 'M'){
+                $array["Gender"]= "Male";}
+            elseif($row['Gender'] == 'F'){
+                $array["Gender"]= "Female";}
+            elseif($row['Gender'] == 'O'){
+                $array["Gender"]="Other";}
             $array["Age"] = date_diff(date_create($row["DateOfBirth"]), date_create('now'))->y;
         }
     }

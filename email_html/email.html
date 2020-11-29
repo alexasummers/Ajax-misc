@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-mail</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form method="POST" action="email.php">
+            <table>
+                <tr><td>From:</td><td><input type="text" name="from"></td></tr>
+                <tr><td>To:</td><td><input type="text" name="to"></td></tr>
+                <tr><td>CC:</td><td><input type="text" name="cc"></td></tr>
+                <tr><td>HTML:</td><td><input type="checkbox" name="html"></td></tr>
+                <tr><td>Subject:</td><td><input type="text" name="subject"></td></tr>
+                <tr><td>Message:</td><td><textarea name="message" rows="4" cols="50"> </textarea></td></tr> 
+                <tr><td></td><td><input type="submit" value="Submit"></td></tr>
+            </table>
+        </form>
+    </body>
+</html>
