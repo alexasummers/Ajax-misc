@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Task Management System</title>
+        <link rel="stylesheet" type="text/css" href="style/items.css">
+        <script id="item-template" type="text/html">
+        <table class="items">
+            <tr><th></th><th>Item</th><th></th></tr>
+            <tr class="item new">
+                <td class="status">
+                </td>
+                <td class="name">
+                    <input placeholder="Item name" id="new_name"  value=""> 
+                </td>
+                <td class="actions">
+                    <button  id="add_button">Add</button>
+                </td>
+            </tr>
+            {{#block items}}
+            <tr class="item">
+                <td class="status">
+                    <input name="item-checkbox" data-item-id="{{id}}" type="checkbox" {{checked}}>
+                </td>
+                <td class="name">
+                    <input id="name_{{id}}" class="{{checked}}" value="{{name}}"> 
+                </td>
+                <td class="actions">
+                    <button data-item-id="{{id}}" id="button_{{id}}" name="edit">Edit</button>
+                    <select name="item-actions" data-item-id="{{id}}">
+                        <option value="actions">Actions</option>
+                        <option value="edit">Edit</option>
+                        <option value="delete">Delete</option>
+                    </select>
+                </td>
+            </tr>
+            {{#end block items}}
+        </table>
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript"  src='script/general.js'></script>
+    <script type="text/javascript"  src='script/items.js'></script>
+</head>
+<body>
+    <div id="items">
+
+    </div>
+</body>
+</html>
