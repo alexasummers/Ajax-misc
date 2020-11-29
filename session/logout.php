@@ -17,9 +17,6 @@ else
     logout();
 
 
-
-
-
 function is_session_active() {
     return isset($_SESSION) && count($_SESSION) > 0 && time() < $_SESSION['start']+60; //check if it has been 1 minute
 }

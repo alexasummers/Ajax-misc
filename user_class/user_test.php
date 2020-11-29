@@ -6,9 +6,6 @@ $user=new User("Samir","samir");
 $name=$user->name; //access password variable
 $info=$user->info(); //access info
 
-//echo $name;
-//echo $info;
-//print_r($user); //prints: User Object ( [name] => Samir [password:User:private] => samir )
 
 $user_2=$user; //a shallow copy of $user
 $user_2->name="Joseph"; //it will change the name for $user and $user2
