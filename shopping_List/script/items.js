@@ -53,7 +53,7 @@ function edit_item(id,name){
         success: function (data) {
             if($.trim(data)=="success"){
                 get_items();
-                alert("The item has been editted successfully");
+                alert("The item has been edited successfully");
             }
         }
     });     
