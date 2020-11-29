@@ -30,7 +30,6 @@ function display_student($row) {
     $student.='<img src="data:' . $row["Picture_Type"] . ';base64,' . base64_encode($row["Picture"]) . '">';
     $student.="<div class='name'>" . $row["FirstName"] . " " . $row["LastName"] . "</div>";
     $student.="<table>";
-    // $gender = $row["Gender"] == 'M' ? "Male" : "Female";
     if ($row['Gender'] == 'M'){
         $gender= "Male";}
     elseif($row['Gender'] == 'F'){
