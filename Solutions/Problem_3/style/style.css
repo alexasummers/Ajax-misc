@@ -1,0 +1,62 @@
+
+
+.button{
+    background-color:chocolate;
+    color:white;
+    border-radius:5px;
+    display:inline;
+    padding:5px;
+}
+
+.button:hover{
+    background-color:brown;
+    cursor:pointer;
+}
+
+div.box{
+    position:relative;
+    float:left;
+    background-color:rgb(245,245,245);
+    border-radius: 4px;
+    width:350px;
+    height:150px;
+    display:block;
+    margin:20px;
+}
+
+div.box img{
+    position:absolute;
+    top:10px;
+    right:20px;
+    background-color:white;
+    border: 1px solid lightgray;
+    padding:3px;
+    width:120px;
+    height:120px;
+}
+
+div.name{
+    position:absolute;
+    top:10px;
+    left:30px;
+    font-size:19px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+div.box table{
+    position:absolute;
+    top:50px;
+    left:30px;
+}
+
+div.box td.name, div.box td.value{
+    background-color:white;
+    border-bottom:1px solid lightgray;
+    padding: 5px;
+    font-weight:bold;
+}
+
+div.box td.value{
+    font-weight: normal;
+}
