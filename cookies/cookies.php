@@ -4,8 +4,7 @@ if (isset($_POST['username'])) {
     if (isset($_COOKIE['username'])) { //if there is a cookie, retrive it
         $username = $_COOKIE['username'];
     } else {
-        /* Create a cookie with the name username and the value $username that is accessible 
-         * across the entire web server on the current domain, and will be removed from the browser’s cache seven days:
+        /* Create a cookie with the name username and the value $username, removed from the browser’s cache seven days:
          */
 
         setcookie('username', $_POST['username'], time() + 60 * 60 * 24 * 7, '/');
